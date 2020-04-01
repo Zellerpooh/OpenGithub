@@ -1,0 +1,3 @@
+rootProject.name='OpenGithub'
+include ':app'
+include ':ommon'
