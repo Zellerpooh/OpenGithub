@@ -34,6 +34,10 @@ dependencies {
   def developmentDependencies = rootProject.ext.development
 
   implementation applicationDependencies.kotlin
+  implementation applicationDependencies.kotlinCoroutines
+  implementation applicationDependencies.kotlinCoroutinesAndroid
+
+  implementation applicationDependencies.kotlinReflect
   implementation applicationDependencies.appCompat
   implementation applicationDependencies.ktxCore
   testImplementation unitTestDependencies.junit

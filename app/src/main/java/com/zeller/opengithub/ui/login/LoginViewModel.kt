@@ -8,6 +8,7 @@ import com.zeller.opengithub.data.LoginRepository
 import com.zeller.opengithub.data.Result
 
 import com.zeller.opengithub.R
+import com.zeller.opengithub.Settings
 
 class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
 
@@ -18,6 +19,8 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
     val loginResult: LiveData<LoginResult> = _loginResult
 
     fun login(username: String, password: String) {
+        Settings.username = username
+        Settings.password = password
         // can be launched in a separate asynchronous job
         val result = loginRepository.login(username, password)
 

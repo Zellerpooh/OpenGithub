@@ -37,6 +37,7 @@ ext {
   leakCanaryVersion = '1.5'
 
   mainApplication = [kotlin                  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+                     kotlinReflect           : "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version",
                      ktxCore                 : "androidx.core:core-ktx:1.2.0",
                      kotlinCoroutines        : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version",
                      kotlinCoroutinesAndroid : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_version",

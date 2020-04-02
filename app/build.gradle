@@ -44,4 +44,5 @@ dependencies {
   testImplementation unitTestDependencies.junit
   androidTestImplementation unitTestDependencies.androidxJunit
   androidTestImplementation acceptanceTestDependencies.espressoCore
+  implementation project(path: ':ommon')
 }
