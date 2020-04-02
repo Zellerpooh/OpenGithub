@@ -43,4 +43,12 @@ dependencies {
   testImplementation unitTestDependencies.junit
   androidTestImplementation unitTestDependencies.androidxJunit
   androidTestImplementation acceptanceTestDependencies.espressoCore
+
+  api 'org.slf4j:slf4j-api:1.7.21'
+  api 'com.github.tony19:logback-android-core:1.1.1-6'
+  api('com.github.tony19:logback-android-classic:1.1.1-6') {
+    // workaround issue #73
+    exclude group: 'com.google.android', module: 'android'
+  }
+
 }

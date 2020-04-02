@@ -7,7 +7,7 @@ import kotlin.reflect.full.isSubclassOf
 import kotlin.reflect.full.primaryConstructor
 import kotlin.reflect.jvm.jvmErasure
 
-class BaseFragment<out P : BasePresenter<BaseFragment<P>>> : IMvpView<P>, Fragment() {
+abstract class BaseFragment<out P : BasePresenter<BaseFragment<P>>> : IMvpView<P>, Fragment() {
     override val presenter: P
 
     init {
@@ -71,5 +71,7 @@ class BaseFragment<out P : BasePresenter<BaseFragment<P>>> : IMvpView<P>, Fragme
         presenter.onViewStateRestored(savedInstanceState)
     }
 
-
 }
+
+class MainFragment:BaseFragment<MainPresenter>()
+class MainPresenter:BasePresenter<MainFragment>()

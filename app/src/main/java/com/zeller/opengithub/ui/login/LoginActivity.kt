@@ -8,12 +8,15 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import com.zeller.ommon.mvp.MainFragment
+import com.zeller.ommon.mvp.MainPresenter
 
 import com.zeller.opengithub.R
 import com.zeller.opengithub.Settings
@@ -34,6 +37,11 @@ class LoginActivity : AppCompatActivity() {
 
         username.setText(Settings.username)
         password.setText(Settings.password)
+
+        val mainFragment = MainFragment()
+        Log.d("mavp", mainFragment.toString())
+        Log.d("mvp", mainFragment.presenter.toString())
+        Log.d("mvp", mainFragment.presenter.view.toString())
 
         loginViewModel = ViewModelProviders.of(this, LoginViewModelFactory())
             .get(LoginViewModel::class.java)

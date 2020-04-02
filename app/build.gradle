@@ -35,6 +35,7 @@ dependencies {
   def developmentDependencies = rootProject.ext.development
 
   implementation applicationDependencies.kotlin
+  implementation applicationDependencies.kotlinReflect
   implementation applicationDependencies.appCompat
   implementation applicationDependencies.ktxCore
   implementation applicationDependencies.material
